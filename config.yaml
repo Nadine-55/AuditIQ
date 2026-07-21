@@ -1,0 +1,15 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@auditiq.com
+      name: Admin User
+      password: Admin133
+
+cookie:
+  expiry_days: 30
+  key: auditiq_secret_key_2026
+  name: auditiq cookie
+
+preauthorized:
+  emails:
+    - admin@auditiq.com
