@@ -1,0 +1,6 @@
+.env
+auditiq.db
+__pycache__/
+*.pyc
+*.pyo
+config.yaml
