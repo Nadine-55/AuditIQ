@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 *.pyo
 config.yaml
+.streamlit/secrets.toml 

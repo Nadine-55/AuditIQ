@@ -18,7 +18,18 @@ from auth import (init_db, register_user, login_user,
                   reset_password, save_audit_history, get_audit_history)
 
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+# Support both local .env and Streamlit Cloud secrets
+
+try:
+
+    api_key = st.secrets['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']
+
+except:
+
+    api_key = os.getenv('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')
+
+client = Groq(api_key=api_key)
 
 st.set_page_config(
     page_title="AuditIQ",
@@ -863,7 +874,7 @@ if uploaded_file:
             st.download_button(
                 "Download Full Audit Report (PDF)",
                 pdf,
-                f"AuditIQ_Full_Report_"
+                f"AuditIQ Full Report"
                 f"{datetime.now().strftime('%Y%m%d')}.pdf",
                 "application/pdf",
                 key="download_full"
