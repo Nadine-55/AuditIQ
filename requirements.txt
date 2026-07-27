@@ -1,0 +1,9 @@
+streamlit
+groq
+pandas
+numpy
+reportlab
+pdfplumber
+python-dotenv
+bcrypt
+openpyxl
