@@ -21,13 +21,12 @@ load_dotenv()
 
 # Support both local .env and Streamlit Cloud secrets
 
+    # Support both local .env and Streamlit Cloud secrets
 try:
-
-    api_key = st.secrets['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']
-
+    api_key = st.secrets["GROQ_API_KEY"]
+    
 except:
-
-    api_key = os.getenv('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')
+    api_key = os.getenv("GROQ_API_KEY")
 
 client = Groq(api_key=api_key)
 
